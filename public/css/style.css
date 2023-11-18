@@ -590,6 +590,12 @@ header.uk-active .cropped {
   }
 }
 
+.beforeafter img {
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .homebook {
   padding-top: 64px;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(49%, #ffffff), color-stop(50%, #104a52), to(#104a52));
@@ -1429,16 +1435,6 @@ footer .footer__bottom span {
   line-height: 1.2em;
 }
 
-.maps .working-hours-block {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .maps .working-hours-block .working-hours-item {
   border-bottom: 1px solid #afafaf80;
   -webkit-box-pack: justify;
@@ -1453,6 +1449,19 @@ footer .footer__bottom span {
 
 .maps .working-hours-block .working-hours-item:last-child {
   border-bottom: 0;
+}
+
+.maps .working-hours-block .working-hours-item td {
+  margin: 12px 0 14px;
+  line-height: 1.2em;
+  font-size: 18px;
+  color: #f6f3ee;
+  font-family: 'Lato', sans-serif;
+}
+
+.maps .working-hours-block .working-hours-item td:first-child {
+  font-size: 20px;
+  color: #f6f3ee;
 }
 
 .maps .working-hours-block .working-hours-item h5, .maps .working-hours-block .working-hours-item h6 {

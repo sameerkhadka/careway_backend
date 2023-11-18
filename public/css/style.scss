@@ -582,6 +582,14 @@ header{
     }
 }
 
+.beforeafter{
+
+    img{
+        height: 340px;
+        object-fit: cover;
+    }
+}
+
 
 .homebook{
 
@@ -1388,8 +1396,8 @@ footer{
     }
 
     .working-hours-block {
-        flex-direction: column;
-        display: flex;
+        // flex-direction: column;
+        // display: flex;
 
         .working-hours-item {
             border-bottom: 1px solid #afafaf80;
@@ -1400,6 +1408,20 @@ footer{
 
             &:last-child{
                 border-bottom: 0;
+            }
+
+            td{
+                margin: 12px 0 14px;
+                line-height: 1.2em;
+                font-size: 18px;
+                color: #f6f3ee;
+                font-family: 'Lato', sans-serif;
+            }
+
+            td:first-child{
+                
+                font-size: 20px;
+                color: #f6f3ee;
             }
 
             h5, h6{

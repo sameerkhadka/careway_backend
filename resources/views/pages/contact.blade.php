@@ -63,7 +63,39 @@
                             Check out our Office hours to plan your visit.
                         </p>
                     </div>
-                    <div class="working-hours-block">
+                    <table>
+                        <tbody class="working-hours-block">
+                            <tr class="working-hours-item">
+                                <td class="text-light">Monday</td>
+                                <td class="title-hours">09:00 - 19:00</td>
+                            </tr>
+                            <tr class="working-hours-item">
+                                <td class="text-light">Tuesday</td>
+                                <td class="title-hours">09:00 - 19:00</td>
+                            </tr>
+                            <tr class="working-hours-item">
+                                <td class="text-light">Wednesday</td>
+                                <td class="title-hours">10:00 - 19:00</td>
+                            </tr>
+                            <tr class="working-hours-item">
+                                <td class="text-light">Thursday</td>
+                                <td class="title-hours">09:00 - 19:00</td>
+                            </tr>
+                            <tr class="working-hours-item">
+                                <td class="text-light">Friday</td>
+                                <td class="title-hours">09:00 - 19:00</td>
+                            </tr>
+                            <tr class="working-hours-item">
+                                <td class="text-light">Saturday</td>
+                                <td class="title-hours">10:00 - 16:00</td>
+                            </tr>
+                            <tr class="working-hours-item">
+                                <td class="text-light">Sunday</td>
+                                <td class="title-hours">Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- <div class="working-hours-block">
                         <div class="working-hours-item">
                             <h5 class="text-light">Monday</h5>
                             <h6 class="title-hours">9 am - 7 pm</h6>
@@ -92,7 +124,7 @@
                             <h5 class="text-light">Sunday</h5>
                             <h6 class="title-hours">Closed</h6>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="uk-width-1-3 uk-visible@s">

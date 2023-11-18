@@ -72,7 +72,7 @@
                             <span uk-icon="icon: facebook"></span>
                         </a>
 
-                        <a href="#booking" uk-scroll class=" button">
+                        <a href="#book" uk-scroll class=" button">
                             Book Now
                         </a>
                     </div>
@@ -94,7 +94,7 @@
                                 <span uk-icon="icon: facebook"></span>
                             </a>
 
-                            <a href="#booking" uk-scroll class=" button">
+                            <a href="#book" uk-scroll class=" button">
                                 Book Now
                             </a>
                             <a class="uk-navbar-item uk-navbar-toggle" href="#careway-mobile" uk-toggle=""
