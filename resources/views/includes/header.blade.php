@@ -25,7 +25,7 @@
                                 <a href="/hairs">Hair Clinic</a>
                                 @php $hairs = \App\Hair::orderBy('order')->get(); @endphp
                                 <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
                                         @foreach($hairs as $hair)
                                         <li><a href="/hairs/{{$hair->slug}}">{{$hair->title}}</a></li>
                                         @endforeach
@@ -36,7 +36,7 @@
                                 <a href="/dental">Dental Aesthetics</a>
                                 @php $dentals = \App\Category::orderBy('order')->get(); @endphp
                                 <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
                                         @foreach($dentals as $dent)
                                         <li><a href="/dental">{{$dent->title}}</a></li>
                                         @endforeach
@@ -47,7 +47,7 @@
                                 <a href="/opd">OPD</a>
                                 @php $opds = \App\OpdPage::orderBy('order')->get(); @endphp
                                 <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
                                         @foreach($opds as $opd)
                                         <li><a href="/opd/{{$opd->slug}}">{{$opd->title}}</a></li>
                                         @endforeach
@@ -56,7 +56,7 @@
                             </li>
                             <li @if(Request::segment(1) == 'photo-gallery' || Request::segment(1) == 'video-gallery') class="uk-active" @endif><a>Results</a>
                                 <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
                                         <li><a href="/photo-gallery">Photo gallery</a></li>
                                         <li><a href="/video-gallery">Video Gallery</a></li>
                                     </ul>
@@ -114,8 +114,8 @@
                         <li @if(Request::segment(1) == 'hairs') class="uk-active" @endif>
                             <a href="/hairs">Hair Clinic</a>
                             @php $hairs = \App\Hair::orderBy('order')->get(); @endphp
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <div class="uk-navbar-dropdown uk-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav  uk-dropdown">
                                     @foreach($hairs as $hair)
                                     <li><a href="/hairs/{{$hair->slug}}">{{$hair->title}}</a></li>
                                     @endforeach
@@ -126,7 +126,7 @@
                             <a href="/dental">Dental Aesthetics</a>
                             @php $dentals = \App\Category::orderBy('order')->get(); @endphp
                             <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
                                     @foreach($dentals as $dent)
                                     <li><a href="/dental">{{$dent->title}}</a></li>
                                     @endforeach
@@ -137,7 +137,7 @@
                             <a href="/opd">OPD</a>
                             @php $opds = \App\OpdPage::orderBy('order')->get(); @endphp
                             <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
                                     @foreach($opds as $opd)
                                     <li><a href="/opd/{{$opd->slug}}">{{$opd->title}}</a></li>
                                     @endforeach
@@ -146,7 +146,7 @@
                         </li>
                         <li @if(Request::segment(1) == 'photo-gallery' || Request::segment(1) == 'video-gallery') class="uk-active" @endif><a>Results</a>
                                 <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
                                         <li><a href="/photo-gallery">Photo gallery</a></li>
                                         <li><a href="/video-gallery">Video Gallery</a></li>
                                     </ul>
