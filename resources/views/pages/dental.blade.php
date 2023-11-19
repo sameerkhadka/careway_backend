@@ -318,7 +318,6 @@
                     <h6 class="subtitle">Book Now</h6>
                     <div class="title">Make an appointment</div>
                 </div>
-                <input type="hidden" name="type" value="dental">
                 <div class="uk-grid uk-child-width-1-2 uk-flex-between">
                     <div class="form__group">
                         <input type="date" placeholder="Pick a date *" required name="date">

@@ -142,7 +142,7 @@ class PageController extends Controller
         Mail::send('email.call', ['data'=>$data], function($message) use ($data, $email){
             $message->from('noreply@carewaynepal.com');
             $message->to($email);
-            $message->subject('Dental Booking from Website');
+            $message->subject('Booking from Website');
         });        
         return back()->with('success','Message Sent Successfully');
     }
