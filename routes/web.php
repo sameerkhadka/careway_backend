@@ -32,6 +32,7 @@ Route::get('/contact',[PageController::class,'contact'])->name('contact');
 Route::get('/dental',[PageController::class,'dental'])->name('dental');
 
 Route::POST('/get-a-call',[PageController::class,'call'])->name('call');
+Route::POST('/book',[PageController::class,'book'])->name('book');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

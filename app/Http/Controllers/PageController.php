@@ -134,4 +134,16 @@ class PageController extends Controller
         });        
         return back()->with('success','Message Sent Successfully'); 
     }
+
+    public function book(Request $request)
+    {
+        $data = $request->all();
+        $email = setting('contact-us.email');
+        Mail::send('email.call', ['data'=>$data], function($message) use ($data, $email){
+            $message->from('noreply@carewaynepal.com');
+            $message->to($email);
+            $message->subject('Dental Booking from Website');
+        });        
+        return back()->with('success','Message Sent Successfully');
+    }
 }

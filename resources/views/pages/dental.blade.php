@@ -312,47 +312,49 @@
 
     <footer>
         <div class="uk-container">
-            <form action="" id="book">
+            <form action="{{route('book')}}" id="book" method="POST">
+                @CSRF
                 <div class="head uk-margin-large-bottom">
                     <h6 class="subtitle">Book Now</h6>
                     <div class="title">Make an appointment</div>
                 </div>
+                <input type="hidden" name="type" value="dental">
                 <div class="uk-grid uk-child-width-1-2 uk-flex-between">
                     <div class="form__group">
-                        <input type="date" placeholder="Pick a date *" required>
+                        <input type="date" placeholder="Pick a date *" required name="date">
                     </div>
                     <div class="form__group">
-                        <input type="time" placeholder="Time *" required>
+                        <input type="time" placeholder="Time *" required name="time">
                     </div>
                     <div class="form__group">
-                        <input type="text" placeholder="Name *" required>
+                        <input type="text" placeholder="Name *" required name="name">
                     </div>
                     <div class="form__group">
-                        <input type="number" placeholder="Number *" required>
+                        <input type="number" placeholder="Number *" required name="phone">
                     </div>
                     <div class="form__group">
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" required name="email">
                     </div>
                     <div class="form__group">
-                        <select id="inputState" class="form-select">
+                        <select id="inputState" class="form-select" name="patient_type">
                             <option selected="">Patient type</option>
-                            <option>New Patient</option>
-                            <option>Existing Patient</option>
+                            <option value="New Patient">New Patient</option>
+                            <option value="Existing Patient">Existing Patient</option>
                         </select>
                     </div>
                     <div class="form__group">
-                        <select id="inputState" class="form-select">
+                        <select id="inputState" class="form-select" name="service">
                             <option selected="">Service</option>
-                            <option>General Dentistry</option>
-                            <option>Cosmetic Dentistry</option>
-                            <option>Advanced Dentistry</option>
+                            <option value="General Dentistry">General Dentistry</option>
+                            <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                            <option value="Advanced Dentistry">Advanced Dentistry</option>
                         </select>
                     </div>
                     <div class="form__group">
-                        <textarea name="" id="" cols="30" rows="8" placeholder="Message"></textarea>
+                        <textarea name="message" id="" cols="30" rows="8" placeholder="Message" required></textarea>
                     </div>
                 </div>
-                <button class="button" onclick="window.location.href=''">Book Now</button>
+                <button class="button" type="submit">Book Now</button>
             </form>
             <div class="footer__wrap" id="contact">
                 <div class="uk-grid uk-child-width-1-4@m uk-child-width-1-2@s uk-flex-between@s">
