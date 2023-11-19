@@ -128,7 +128,7 @@ class PageController extends Controller
         $data = $request->all();
         $email = setting('contact-us.email');
         Mail::send('email.call', ['data'=>$data], function($message) use ($data, $email){
-            $message->from('no-reply@carewaynepal.com');
+            $message->from('noreply@carewaynepal.com');
             $message->to($email);
             $message->subject('Call Request from Website');
         });        
