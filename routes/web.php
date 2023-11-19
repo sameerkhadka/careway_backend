@@ -31,6 +31,8 @@ Route::get('/about',[PageController::class,'about'])->name('about');
 Route::get('/contact',[PageController::class,'contact'])->name('contact');
 Route::get('/dental',[PageController::class,'dental'])->name('dental');
 
+Route::POST('/get-a-call',[PageController::class,'call'])->name('call');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     Route::post('/add-edit-faqs',[AdminController::class,'addUpdateFaqs']);

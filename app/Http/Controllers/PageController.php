@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Mail;
 use App\Homepage;
 use App\Service;
 use App\About;
@@ -120,5 +121,17 @@ class PageController extends Controller
     {
         $data['item'] = DentalBlog::where('slug', $slug)->first();
         return view('pages.blogdetail', $data);
+    }
+
+    public function call(Request $request)
+    {
+        $data = $request->all();
+        $email = setting('contact-us.email');
+        Mail::send('email.call', ['data'=>$data], function($message) use ($data, $email){
+            $message->from('no-reply@carewaynepal.com');
+            $message->to($email);
+            $message->subject('Call Request from Website');
+        });        
+        return back()->with('success','Message Sent Successfully'); 
     }
 }

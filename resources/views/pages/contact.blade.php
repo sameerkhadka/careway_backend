@@ -63,38 +63,7 @@
                             Check out our Office hours to plan your visit.
                         </p>
                     </div>
-                    <table>
-                        <tbody class="working-hours-block">
-                            <tr class="working-hours-item">
-                                <td class="text-light">Monday</td>
-                                <td class="title-hours">09:00 - 19:00</td>
-                            </tr>
-                            <tr class="working-hours-item">
-                                <td class="text-light">Tuesday</td>
-                                <td class="title-hours">09:00 - 19:00</td>
-                            </tr>
-                            <tr class="working-hours-item">
-                                <td class="text-light">Wednesday</td>
-                                <td class="title-hours">10:00 - 19:00</td>
-                            </tr>
-                            <tr class="working-hours-item">
-                                <td class="text-light">Thursday</td>
-                                <td class="title-hours">09:00 - 19:00</td>
-                            </tr>
-                            <tr class="working-hours-item">
-                                <td class="text-light">Friday</td>
-                                <td class="title-hours">09:00 - 19:00</td>
-                            </tr>
-                            <tr class="working-hours-item">
-                                <td class="text-light">Saturday</td>
-                                <td class="title-hours">10:00 - 16:00</td>
-                            </tr>
-                            <tr class="working-hours-item">
-                                <td class="text-light">Sunday</td>
-                                <td class="title-hours">Closed</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                   {!!setting('contact-us.working_days')!!}
                     <!-- <div class="working-hours-block">
                         <div class="working-hours-item">
                             <h5 class="text-light">Monday</h5>

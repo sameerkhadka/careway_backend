@@ -53,14 +53,15 @@
                 <div class="form">
                     <h6>Stay in Touch</h6>
                     <p>Fill the form and we’ll reach out to you asap.</p>
-                    <form action="">
+                    <form action="{{route('call')}}" method="POST">
+                        @csrf
                         <div class="form__group">
-                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Name" name="name">
                         </div>
                         <div class="form__group">
-                            <input type="number" placeholder="Contact Number">
+                            <input type="number" placeholder="Contact Number" name="phone">
                         </div>
-                        <button class="button">Get a call</button>
+                        <button type="submit" class="button">Get a call</button>
                     </form>
                 </div>
             </div>
