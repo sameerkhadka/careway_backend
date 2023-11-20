@@ -34,8 +34,8 @@
     <div class="home__video">
         <div class="video__wrap uk-position-relative">
             
-            <video class="uk-visible@s" src="storage/{{json_decode($content->video)[0]->download_link}}" width="1920" height="1080" uk-video="autoplay: inview; automute: true" controls playsinline></video>
-            <video class="uk-hidden@s" src="storage/{{json_decode($content->video)[0]->download_link}}" width="1920" height="1080" uk-video="autoplay: inview; automute: true" controls playsinline></video>
+            <video class="uk-visible@s" src="storage/{{json_decode($content->video)[0]->download_link}}" width="1920" height="1080" uk-video="automute: true" autoplay preload="" playsinline></video>
+            <video class="uk-hidden@s" src="storage/{{json_decode($content->video)[0]->download_link}}" width="1920" height="1080" uk-video="automute: true" autoplay preload="" playsinline></video>
             <div class="results__cta uk-hidden@s uk-position-absolute">
                 <a href="/images" target="blank">
                     <img src="{{asset('images/image-gallery (1).png')}}" alt="">
