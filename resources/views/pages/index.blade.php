@@ -147,6 +147,7 @@
                     </p>
                 </div>
             </div>
+            @if(count($reviews) > 0)
             <div class="uk-width-3-5@l uk-width-2-3@m uk-width-1-1@s">
                 <div class="swiper testimonials">
                     <div class="swiper-wrapper">
@@ -175,6 +176,7 @@
                     <i class="fa-solid fa-arrow-right-long"></i>
                 </div>
             </div>
+            @endif
         </div>
     </section>
 
