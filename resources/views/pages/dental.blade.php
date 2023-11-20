@@ -170,8 +170,8 @@
                 <div class="search__input">
                     <form action="{{route('call')}}" method="POST">
                         @csrf
-                        <input type="text" placeholder="Name" name="name">
-                        <input type="number" placeholder="Contact Number" name="phone">
+                        <input type="text" placeholder="Name" name="name" required>
+                        <input type="number" placeholder="Contact Number" name="phone" required>
                         <button type="submit"><span uk-icon="arrow-right" class="uk-icon"></span></button>
                     </form>
                 </div>

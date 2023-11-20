@@ -56,10 +56,10 @@
                     <form action="{{route('call')}}" method="POST">
                         @csrf
                         <div class="form__group">
-                            <input type="text" placeholder="Name" name="name">
+                            <input type="text" placeholder="Name" name="name" required>
                         </div>
                         <div class="form__group">
-                            <input type="number" placeholder="Contact Number" name="phone">
+                            <input type="number" placeholder="Contact Number" name="phone" required>
                         </div>
                         <button type="submit" class="button">Get a call</button>
                     </form>
