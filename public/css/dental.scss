@@ -456,6 +456,11 @@ header{
                 -webkit-appearance: none;
                 margin: 0;
             }
+            
+            &:focus-visible {
+
+                outline: 0px;
+            }
         }
 
         button {

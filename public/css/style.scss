@@ -237,7 +237,7 @@ header{
 
         img {
             width: 36px;
-            filter: grayscale(0.95);
+            filter: grayscale(0.1);
         }
 
         &:hover {
@@ -654,7 +654,7 @@ form{
         &:focus-visible {
 
             border-bottom-color: #104A52;
-            outline: 0;
+            outline: 0px;
 
             &::placeholder {
                 color: transparent !important;

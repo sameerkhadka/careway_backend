@@ -246,8 +246,8 @@ header.uk-active .cropped {
 
 .share a img {
   width: 36px;
-  -webkit-filter: grayscale(0.95);
-          filter: grayscale(0.95);
+  -webkit-filter: grayscale(0.1);
+          filter: grayscale(0.1);
 }
 
 .share a:hover {
@@ -668,7 +668,7 @@ form input::placeholder, form select::placeholder, form textarea::placeholder {
 
 form input:focus-visible, form select:focus-visible, form textarea:focus-visible {
   border-bottom-color: #104A52;
-  outline: 0;
+  outline: 0px;
 }
 
 form input:focus-visible::-webkit-input-placeholder, form select:focus-visible::-webkit-input-placeholder, form textarea:focus-visible::-webkit-input-placeholder {

@@ -479,6 +479,10 @@ header .cropped {
   margin: 0;
 }
 
+.callback .search__input input:focus-visible {
+  outline: 0px;
+}
+
 .callback .search__input button {
   width: 54px;
   height: 54px;
