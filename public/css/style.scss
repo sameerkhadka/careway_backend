@@ -175,6 +175,10 @@ header{
             transition: 0.4s ease;
         }
     }
+
+    .uk-logo img{
+        width: 179px;
+    }
 }
 
 .careway-header-mobile{
@@ -185,6 +189,13 @@ header{
         .uk-navbar-right {    
             gap: 24px;
         }
+        
+        .uk-navbar-left {    
+
+            .callonheader{
+                display: none;
+            }
+        }
 
         @media screen and (max-width: 410px) {
             
@@ -193,8 +204,18 @@ header{
             }
 
             .uk-navbar-left {    
-                justify-content: center;
+                justify-content: space-between;
                 width: 100%;
+
+                .callonheader{
+                    display: block;
+                    margin-right: -20px;
+                    font-weight: 400;
+
+                    &::before, &::after{
+                        bottom: -2px;
+                    }
+                }
             }
 
             .uk-navbar-right {   
@@ -232,7 +253,7 @@ header{
 
     a {
         display: block;
-        margin: 8px 0;
+        margin: 10px 0;
         opacity: 0.4;
 
         img {
@@ -252,19 +273,23 @@ header{
     @media screen and (max-width: 640px) {
         
         flex-direction: row;
-        gap: 12px;
+        gap: 18px;
         bottom: 8px;
         top: auto;
         left: 50%;
         right: auto;
         transform: translateX(-50%);
+
+        a{
+            width: 36px;
+        }
     }
 }
 
 
 .results__cta {
     right: 0;
-    top: 50%;
+    top: 50vh;
     transform: translateY(-50%);
     z-index: 3;
     display: flex;

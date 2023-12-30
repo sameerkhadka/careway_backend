@@ -29,6 +29,18 @@
         <a href="{{setting('contact-us.messenger')}}" target="blank"> 
             <img src="{{asset('images/messenger.png')}}" alt="">
         </a>
+        <a href="" target="blank"> 
+            <img src="{{asset('images/imo.png')}}" alt="">
+        </a>
+    </div>
+    
+    <div class="results__cta uk-hidden@s uk-position-fixed">
+        <a href="/images" target="blank">
+            <img src="{{asset('images/image-gallery (1).png')}}" alt="">
+        </a>
+        <a href="/videos" target="blank">
+            <img src="{{asset('images/play (4).png')}}" alt="">
+        </a>
     </div>
 
     <div class="home__video">
@@ -36,14 +48,7 @@
             
             <video class="uk-visible@s" src="storage/{{json_decode($content->video)[0]->download_link}}" width="1920" height="1080" uk-video="automute: true" autoplay loop preload="" playsinline></video>
             <video class="uk-hidden@s" src="storage/{{json_decode($content->video)[0]->download_link}}" width="1920" height="1080" uk-video="automute: true" autoplay loop preload="" playsinline></video>
-            <div class="results__cta uk-hidden@s uk-position-absolute">
-                <a href="/images" target="blank">
-                    <img src="{{asset('images/image-gallery (1).png')}}" alt="">
-                </a>
-                <a href="/videos" target="blank">
-                    <img src="{{asset('images/play (4).png')}}" alt="">
-                </a>
-            </div>
+            
         </div>
     </div>
 

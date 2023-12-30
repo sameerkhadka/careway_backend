@@ -85,23 +85,27 @@
             <div class="uk-container">
                 <div class="uk-navbar-container">
                     <nav uk-navbar="" class="uk-navbar">
-                      <div class="uk-navbar-left uk-margin-right">
-                        <a href="/" class="uk-navbar-item uk-logo">
-                          <img src="{{Voyager::image(setting('site.logo'))}}">
-                        </a>
-                      </div>
-                      <div class="uk-navbar-right">
-                          <a href="{{setting('contact-us.facebook')}}" class="uk-navbar-item" target="_blank">
-                              <span uk-icon="icon: facebook"></span>
-                          </a>
-      
-                          <a href="./contact#booking" uk-scroll class=" button">
-                              Book Now
-                          </a>
-                          <a class="uk-navbar-item uk-navbar-toggle" href="#careway-mobile" uk-toggle="" aria-expanded="false">
-                            <div uk-navbar-toggle-icon="" class="uk-icon uk-navbar-toggle-icon"></div>
-                          </a>
-                      </div>
+                        <div class="uk-navbar-left uk-margin-right">
+                            <a href="/" class="uk-navbar-item uk-logo">
+                                <!-- <img src="{{asset('images/logo.svg')}}"> -->
+                                <img src="{{Voyager::image(setting('site.logo'))}}">
+                            </a>
+                            <a href="tel:" target="blank" class="callonheader button">
+                                +977-56490860
+                            </a>
+                        </div>
+                        <div class="uk-navbar-right">
+                            <a href="{{setting('contact-us.facebook')}}" class="uk-navbar-item" target="_blank">
+                                <span uk-icon="icon: facebook"></span>
+                            </a>
+        
+                            <a href="./contact#booking" uk-scroll class=" button">
+                                Book Now
+                            </a>
+                            <a class="uk-navbar-item uk-navbar-toggle" href="#careway-mobile" uk-toggle="" aria-expanded="false">
+                                <div uk-navbar-toggle-icon="" class="uk-icon uk-navbar-toggle-icon"></div>
+                            </a>
+                        </div>
                     </nav>
                   </div>
             </div>
