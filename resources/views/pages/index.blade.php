@@ -34,8 +34,8 @@
     <div class="home__video">
         <div class="video__wrap uk-position-relative">
             
-            <video class="uk-visible@s" src="{{asset('images/production_id_4487290 (2160p).mp4')}}" width="1920" height="1080" uk-video="automute: true" playsinline loop autoplay preload=""></video>
-            <video class="uk-hidden@s" src="storage/{{json_decode($content->video)[0]->download_link}}" width="1920" height="1080" uk-video="automute: true" playsinline loop autoplay preload=""></video>
+            <video class="uk-visible@s" src="storage/{{json_decode($content->video)[0]->download_link}}" width="1920" height="1080" uk-video="automute: true" autoplay loop preload="" playsinline></video>
+            <video class="uk-hidden@s" src="storage/{{json_decode($content->video)[0]->download_link}}" width="1920" height="1080" uk-video="automute: true" autoplay loop preload="" playsinline></video>
             <div class="results__cta uk-hidden@s uk-position-absolute">
                 <a href="/images" target="blank">
                     <img src="{{asset('images/image-gallery (1).png')}}" alt="">
@@ -147,6 +147,7 @@
                     </p>
                 </div>
             </div>
+            @if(count($reviews) > 0)
             <div class="uk-width-3-5@l uk-width-2-3@m uk-width-1-1@s">
                 <div class="swiper testimonials">
                     <div class="swiper-wrapper">
@@ -175,6 +176,7 @@
                     <i class="fa-solid fa-arrow-right-long"></i>
                 </div>
             </div>
+            @endif
         </div>
     </section>
 
