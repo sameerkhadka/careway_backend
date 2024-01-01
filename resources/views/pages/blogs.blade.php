@@ -50,7 +50,7 @@
                            {!!strip_tags($blog->description)!!}
                         </p>
                         <div>
-                            <a href="/blogs/{{$blog->slug}}" class="button">Read more</a>
+                            <a href="{{$blog->link ? $blog->link : '/blogs/' . $blog->slug }}" @if($blog->link) target="blank" @endif class="button">Read more</a>
                         </div>
                     </div>
                 </div>
