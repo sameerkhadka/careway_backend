@@ -21,50 +21,19 @@
 
                         <ul class="uk-navbar-nav">
                             <li @if(!Request::segment(1)) class="uk-active" @endif><a href="/">Home</a></li>
-                            <li @if(Request::segment(1) == 'hairs') class="uk-active" @endif>
-                                <a href="/hairs">Hair Clinic</a>
-                                @php $hairs = \App\Hair::orderBy('order')->get(); @endphp
+                            @foreach (menu('site','_json') as $item)
+                            <li @if(Request::segment(1) == $item->url) class="uk-active" @endif><a href="{{ $item->url ? '/'.$item->url : '#'}}">{{$item->title}}</a>
+                                @if(!$item->children->isEmpty())
                                 <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
-                                        @foreach($hairs as $hair)
-                                        <li><a href="/hairs/{{$hair->slug}}">{{$hair->title}}</a></li>
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        @foreach ($item->children as $subitem)
+                                            <li><a href="/{{ $subitem->url }}">{{$subitem->title}}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>
+                                @endif
                             </li>
-                            <li>
-                                <a href="/dental">Dental Aesthetics</a>
-                                @php $dentals = \App\Category::orderBy('order')->get(); @endphp
-                                <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
-                                        @foreach($dentals as $dent)
-                                        <li><a href="/dental">{{$dent->title}}</a></li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </li>
-                            <li @if(Request::segment(1) == 'opd') class="uk-active" @endif>
-                                <a href="/opd">OPD</a>
-                                @php $opds = \App\OpdPage::orderBy('order')->get(); @endphp
-                                <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
-                                        @foreach($opds as $opd)
-                                        <li><a href="/opd/{{$opd->slug}}">{{$opd->title}}</a></li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </li>
-                            <li @if(Request::segment(1) == 'photo-gallery' || Request::segment(1) == 'video-gallery') class="uk-active" @endif><a>Results</a>
-                                <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
-                                        <li><a href="/photo-gallery">Photo gallery</a></li>
-                                        <li><a href="/video-gallery">Video Gallery</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li @if(Request::segment(1) == 'faqs') class="uk-active" @endif><a href="/faqs">FAQs</a></li>
-                            <li @if(Request::segment(1) == 'blogs') class="uk-active" @endif><a href="/blogs">Blogs</a></li>
-                            <li @if(Request::segment(1) == 'about') class="uk-active" @endif><a href="/about">About</a></li>
+                            @endforeach
                         </ul>
 
                     </div>
@@ -114,51 +83,20 @@
                 <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close=""></button>
                 <div class="uk-panel uk-margin-top uk-margin-remove-last-child">
                     <ul class="uk-nav">
-                        <li class="uk-active"><a href="/index">Home</a></li>
-                        <li @if(Request::segment(1) == 'hairs') class="uk-active" @endif>
-                            <a href="/hairs">Hair Clinic</a>
-                            @php $hairs = \App\Hair::orderBy('order')->get(); @endphp
-                            <div class="uk-navbar-dropdown uk-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav  uk-dropdown">
-                                    @foreach($hairs as $hair)
-                                    <li><a href="/hairs/{{$hair->slug}}">{{$hair->title}}</a></li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/dental">Dental Aesthetics</a>
-                            @php $dentals = \App\Category::orderBy('order')->get(); @endphp
+                    <li @if(!Request::segment(1)) class="uk-active" @endif><a href="/">Home</a></li>
+                        @foreach (menu('site','_json') as $item)
+                        <li @if(Request::segment(1) == $item->url) class="uk-active" @endif><a href="{{ $item->url ? '/'.$item->url : '#'}}">{{$item->title}}</a>
+                            @if(!$item->children->isEmpty())
                             <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
-                                    @foreach($dentals as $dent)
-                                    <li><a href="/dental">{{$dent->title}}</a></li>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    @foreach ($item->children as $subitem)
+                                        <li><a href="/{{ $subitem->url }}">{{$subitem->title}}</a></li>
                                     @endforeach
                                 </ul>
                             </div>
+                            @endif
                         </li>
-                        <li @if(Request::segment(1) == 'opd') class="uk-active" @endif>
-                            <a href="/opd">OPD</a>
-                            @php $opds = \App\OpdPage::orderBy('order')->get(); @endphp
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
-                                    @foreach($opds as $opd)
-                                    <li><a href="/opd/{{$opd->slug}}">{{$opd->title}}</a></li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </li>
-                        <li @if(Request::segment(1) == 'photo-gallery' || Request::segment(1) == 'video-gallery') class="uk-active" @endif><a>Results</a>
-                                <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav uk-dropdown">
-                                        <li><a href="/photo-gallery">Photo gallery</a></li>
-                                        <li><a href="/video-gallery">Video Gallery</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li @if(Request::segment(1) == 'faqs') class="uk-active" @endif><a href="/faqs">FAQs</a></li>
-                            <li @if(Request::segment(1) == 'blogs') class="uk-active" @endif><a href="/blogs">Blogs</a></li>
-                            <li @if(Request::segment(1) == 'about') class="uk-active" @endif><a href="/about">About</a></li>
+                        @endforeach
                     </ul>
                 </div>
               </div>
